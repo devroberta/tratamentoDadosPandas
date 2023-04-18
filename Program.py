@@ -22,15 +22,15 @@ faturamento_df = dados_df.loc[dados_df['valor'] > 0.0]
 valores_series = faturamento_df['valor']
 
 # Imprimir menor valor faturado encontrado na lista
-print(f'Menor valor faturado: {menor_valor_faturado(valores_series)}')
+print(f'Menor valor faturado: $ {menor_valor_faturado(valores_series):,.2f}')
 
 # Imprimir maior valor faturado encontrado na lista
-print(f'Maior valor faturado: {maior_valor_faturado(valores_series)}')
+print(f'Maior valor faturado: $ {maior_valor_faturado(valores_series):,.2f}')
 
 # Busca o valor da media na funçao media_mensal()
 valor_media = media_mensal(valores_series)
 # Imprime a media mensal dos dias faturados
-print(f'Media valor faturado: {valor_media}')
+print(f'Media valor faturado: $ {valor_media:,.2f}')
 
 # Gera tabela com registros maiores e igual a media mensal
 maior_que_a_media = faturamento_df.loc[faturamento_df['valor'] > valor_media]
